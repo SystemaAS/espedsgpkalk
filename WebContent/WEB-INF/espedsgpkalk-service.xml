@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- ================  -->
+ 	<!-- APPLICATION WIDE -->  
+	<!-- ================  -->
+	<bean id="urlCgiProxyService" class="no.systema.main.service.UrlCgiProxyServiceImpl"/>
+	<bean id="systemaWebLoginService" class="no.systema.main.service.login.SystemaWebLoginServiceImpl"/>
+	<bean id="currencyRateService" class="no.systema.main.service.general.CurrencyRateServiceImpl"/>
+	<bean id="notisblockService" class="no.systema.main.service.general.notisblock.NotisblockServiceImpl"/>
+	<bean id="ediFtpLogService" class="no.systema.main.service.general.EdiFtpLogServiceImpl"/>
+	<bean id="firmLoginService" class="no.systema.main.service.FirmLoginServiceImpl"/>
+	<bean id="uploadFileToArchiveService" class="no.systema.main.service.general.UploadFileToArchiveServiceImpl"/>
+	
+	
+	<!-- ===============  -->
+	<!-- TVINN-SAD WIDE   -->
+	<!-- ===============  -->
+	<!-- TVINN-SAD - Authorization -->
+    <bean id="tvinnSadAuthorizationService" class="no.systema.tvinn.sad.service.TvinnSadAuthorizationServiceImpl"/>
+    <bean id="tvinnSadCustomerService" class="no.systema.tvinn.sad.service.TvinnSadCustomerServiceImpl"/>
+    <!-- TVINN - Drop down bean --> 
+    <bean id="tvinnSadDropDownListPopulationService" class="no.systema.tvinn.sad.service.html.dropdown.TvinnSadDropDownListPopulationService"/>
+    
+    <!-- =================  -->
+	<!-- TVINN-SAD ADMIN    -->
+	<!-- =================  -->
+	<bean id="sadAdminTransportService" class="no.systema.tvinn.sad.admin.service.SadAdminTransportServiceImpl"/>
+	<bean id="sadAdminAvggrunnlagService" class="no.systema.tvinn.sad.admin.service.SadAdminAvggrunnlagServiceImpl"/>
+	
+	
+	
+</beans>

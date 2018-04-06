@@ -20,21 +20,13 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	<bean id="uploadFileToArchiveService" class="no.systema.main.service.general.UploadFileToArchiveServiceImpl"/>
 	
 	
-	<!-- ===============  -->
-	<!-- TVINN-SAD WIDE   -->
-	<!-- ===============  -->
-	<!-- TVINN-SAD - Authorization -->
-    <bean id="tvinnSadAuthorizationService" class="no.systema.tvinn.sad.service.TvinnSadAuthorizationServiceImpl"/>
-    <bean id="tvinnSadCustomerService" class="no.systema.tvinn.sad.service.TvinnSadCustomerServiceImpl"/>
-    <!-- TVINN - Drop down bean --> 
-    <bean id="tvinnSadDropDownListPopulationService" class="no.systema.tvinn.sad.service.html.dropdown.TvinnSadDropDownListPopulationService"/>
-    
-    <!-- =================  -->
-	<!-- TVINN-SAD ADMIN    -->
-	<!-- =================  -->
-	<bean id="sadAdminTransportService" class="no.systema.tvinn.sad.admin.service.SadAdminTransportServiceImpl"/>
-	<bean id="sadAdminAvggrunnlagService" class="no.systema.tvinn.sad.admin.service.SadAdminAvggrunnlagServiceImpl"/>
-	
+	<!-- ============================  -->
+	<!-- FRAKTKALKULATOR				  -->
+	<!-- ============================  -->
+	<bean id="fraktKalkulatorChildWindowsService" class="no.systema.fraktkalkulator.service.FraktKalkulatorChildWindowsServiceImpl"/>
+	<bean id="fraktKalkulatorUserService" class="no.systema.fraktkalkulator.service.FraktKalkulatorUserServiceImpl"/>
+	<bean id="fraktKalkulatorResultService" class="no.systema.fraktkalkulator.service.FraktKalkulatorResultServiceImpl"/>
+	<bean id="fraktKalkulatorDropDownService" class="no.systema.fraktkalkulator.service.FraktKalkulatorDropDownServiceImpl"/>
 	
 	
 </beans>

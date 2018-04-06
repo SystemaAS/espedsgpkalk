@@ -113,17 +113,7 @@
 			    			<%-- --------------------------- 
 			    			<a tabindex=-1 href="sporringoppdrag_mainlist.do?action=doFind&sg=${Xuser.tvinnSadSign}"> --%>
 			    			<a tabindex=-1 href="fraktkalkulator.do?action=doInit">
-			    				&nbsp;<font 
-			    				<c:choose>           
-		                   			<c:when test="${user.activeMenu=='FRAKTKALKULATOR'}">
-		                       			class="headerMenuMediumGreen"
-		                   			</c:when>
-		                   			<c:otherwise>   
-		                       			class="headerMenuLightGreen"
-		                   			</c:otherwise>
-		               			</c:choose>
-			    				
-			    				>&nbsp;<spring:message code="systema.fraktkalkulator.main.label"/>&nbsp;</font>
+			    				&nbsp;<font class="headerMenuMediumGreen" >&nbsp;<spring:message code="systema.fraktkalkulator.main.label"/>&nbsp;</font>
 			    			</a>
 			    			
 	      				</td>		      				

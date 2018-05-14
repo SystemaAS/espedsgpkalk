@@ -42,22 +42,22 @@
 					<td>
 						<table>
 						<tr>
-							<td class="text11">&nbsp;Navn</td>
-							<td class="text11">&nbsp;<input type="text" class="inputText" name="st2nvn" id="st2nvn" size="20" maxlength="35" value="${model.record.st2nvn}"></td>
+							<td class="text14">&nbsp;Navn</td>
+							<td class="text14">&nbsp;<input type="text" class="inputText" name="st2nvn" id="st2nvn" size="20" maxlength="35" value="${model.record.st2nvn}"></td>
 						
-							<td class="text11">&nbsp;&nbsp;&nbsp;Kun land</td>
-							<td class="text11">&nbsp;<input type="text" class="inputText" name="st2lk" id="st2lk" size="2" maxlength="2" value="${model.record.st2lk}"></td>
+							<td class="text14">&nbsp;&nbsp;&nbsp;Kun land</td>
+							<td class="text14">&nbsp;<input type="text" class="inputText" name="st2lk" id="st2lk" size="2" maxlength="2" value="${model.record.st2lk}"></td>
 							
-							<td class="text11">&nbsp;</td>
-							<td class="text11">Vis kun</td>
-							<td class="text11">
+							<td class="text14">&nbsp;</td>
+							<td class="text14">Vis kun</td>
+							<td class="text14">
 								<select name="wskunpa" id="wskunpa">
 		            					<option value="">-velg-</option>
 		            					<option value="A" <c:if test="${model.record.wskunpa == 'A'}"> selected </c:if> >Alfakoder</option>
 		            					<option value="P" <c:if test="${model.record.wskunpa == 'P'}"> selected </c:if> >PostNr.</option>
 								</select>
 							</td>
-							<td class="text11">&nbsp;</td>
+							<td class="text14">&nbsp;</td>
 	           				<td align="right">&nbsp;<input class="inputFormSubmit" type="submit" name="submit" value='<spring:message code="systema.fraktkalkulator.search"/>'>
 		           		</tr>
 		           		</table>
@@ -67,7 +67,7 @@
 					<tr><td><hr size="1" width="100%"/></td></tr>								           		
 	           		<tr height="15"><td></td></tr>
 					
-					<tr class="text12" >
+					<tr class="text14" >
 					<td class="ownScrollableSubWindowDynamicWidthHeight" style="width:600px; height:30em;">
 						<%-- this is the datatables grid (content) --%>
 						<c:choose>
@@ -80,10 +80,10 @@
 						</c:choose>
 					
 						<thead>
-						<tr style="background-color:#EEEEEE">
-						    <th class="text11">&nbsp;Kode/pnr&nbsp;</th>   
-		                    <th class="text11">&nbsp;Navn&nbsp;</th>
-		                    <th class="text11">&nbsp;Land&nbsp;</th>
+						<tr class="tableHeaderField">
+						    <th class="text14">&nbsp;Kode/pnr&nbsp;</th>   
+		                    <th class="text14">&nbsp;Navn&nbsp;</th>
+		                    <th class="text14">&nbsp;Land&nbsp;</th>
 		                </tr> 
 		                </thead>
 		                
@@ -93,27 +93,27 @@
 			                   <c:when test="${counter.count%2==0}">
 			                   		<c:choose>
 										<c:when test="${model.direction == 'fra'}">
-											<tr class="text11 clazzDtRowPostalCodeFra" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
+											<tr class="text14 clazzDtRowPostalCodeFra" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
 										</c:when>
 										<c:otherwise>
-											<tr class="text11 clazzDtRowPostalCodeTil" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
+											<tr class="text14 clazzDtRowPostalCodeTil" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
 										</c:otherwise>
 									</c:choose>
 			                   </c:when>
 			                   <c:otherwise>
 			                   		<c:choose>
 										<c:when test="${model.direction == 'fra'}">
-					                       	<tr class="text11 clazzDtRowPostalCodeFra" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
+					                       	<tr class="text14 clazzDtRowPostalCodeFra" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
 										</c:when>
 										<c:otherwise>
-											<tr class="text11 clazzDtRowPostalCodeTil" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
+											<tr class="text14 clazzDtRowPostalCodeTil" id="${record.st2kod}_${record.st2lk}@dt_postalcode_${counter.count}" >
 										</c:otherwise>
 									</c:choose>
 			                   </c:otherwise>
 			               </c:choose>
-			               <td style="cursor:pointer;" class="text11">&nbsp;${record.st2kod}</td>
-			               <td class="text11">&nbsp;${record.st2nvn}</td>
-			               <td class="text11">&nbsp;${record.st2lk}</td>
+			               <td style="cursor:pointer;" class="text14">&nbsp;${record.st2kod}</td>
+			               <td class="text14">&nbsp;${record.st2nvn}</td>
+			               <td class="text14">&nbsp;${record.st2lk}</td>
 			            </tr> 
 			            </c:forEach>
 			            </tbody>

@@ -44,7 +44,7 @@
 		
 		<%-- Left cell --%>
 		<tr>
-			<td width="50%"class="text12" valign="top">
+			<td width="50%"class="text14" valign="top">
 				<form action="fraktkalkulator.do?action=doFind" name="searchForm" id="searchForm" method="post">
 				<input type="hidden" name="applicationUser" id="applicationUser" value='${user.user}'>
 				<input type="hidden" name="wsuser" id="wsuser" value='${model.user.wsuser}'>
@@ -57,12 +57,12 @@
 					 	<td >
 						<table width="100%" class="dashboardFrameHeader" border="0" cellspacing="1" cellpadding="0">
 					 		<tr height="15">
-					 			<td class="text12White">
+					 			<td class="text14White">
 					 				&nbsp;&nbsp;<spring:message code="systema.fraktkalkulator.main.form.search.label.title"/>
 									<img src="resources/images/find3.png" width="12px" height="12px" border="0" alt="find">
 					 			</td>
-					 			<td valign="bottom" align="center" class="text12White"><spring:message code="systema.fraktkalkulator.main.form.search.label.kundNr"/>&nbsp;[&nbsp;<b>${user.custNr}</b>&nbsp;]</td>
-					 			<td valign="bottom" align="right" class="text12White">${model.user.overskr}&nbsp;&nbsp;</td>
+					 			<td valign="bottom" align="center" class="text14White"><spring:message code="systema.fraktkalkulator.main.form.search.label.kundNr"/>&nbsp;[&nbsp;<b>${user.custNr}</b>&nbsp;]</td>
+					 			<td valign="bottom" align="right" class="text14White">${model.user.overskr}&nbsp;&nbsp;</td>
 			 				</tr>
 			            </table>
 			            </td>
@@ -74,7 +74,7 @@
 					 		<tr >
 								<c:choose>
 									<c:when test="${not empty user.intern && (user.intern=='J' || user.intern=='j')}">
-							 			<td class="text12" colspan="2">&nbsp;<span title="avvknr"><spring:message code="systema.fraktkalkulator.main.form.search.label.avvknr"/></span>
+							 			<td class="text14" colspan="2">&nbsp;<span title="avvknr"><spring:message code="systema.fraktkalkulator.main.form.search.label.avvknr"/></span>
 							 				<a href="javascript:void(0);" target="_blank" onClick="window.open('fraktkalkulator_childwindow_customer.do?action=doInit','customerWin','top=150px,left=300px,height=600px,width=800px,scrollbars=no,status=no,location=no')">
 							 					<img id="imgCustomerSearch" style="cursor:pointer;" src="resources/images/find.png" width="12px" height="12px" border="0" alt="search">
 							 				</a>
@@ -84,7 +84,7 @@
 										<td colspan="2">&nbsp;</td>					 			
 						 			</c:otherwise>
 					 			</c:choose>
-					 			<td class="text12" >
+					 			<td class="text14" >
 					    				 <input style="cursor:pointer;" type="button" value="Postadr.bok" name="cnButton" onClick="window.open('http://epab.posten.no','')">
 					    				 <img src="resources/images/find.png" width="12px" height="12px" border="0" alt="search">
 					 			</td>
@@ -92,7 +92,7 @@
 			 				<tr >
 			 					<c:choose>
 				 					<c:when test="${not empty user.intern && (user.intern=='J' || user.intern=='j')}">
-						 				<td class="text12" colspan="2"><input type="text" class="inputTextMediumBlue" name="avvknr" id="avvknr" size="10" maxlength="8" value="${model.user.avvknr}"></td>
+						 				<td class="text14" colspan="2"><input type="text" class="inputTextMediumBlue" name="avvknr" id="avvknr" size="10" maxlength="8" value="${model.user.avvknr}"></td>
 						 			</c:when>
 						 			<c:otherwise>
 						 				<td colspan="2">&nbsp;</td>
@@ -100,24 +100,24 @@
 					 			</c:choose>
 			 				</tr>
 			 				<tr>
-			 					<td class="text12">&nbsp;<span title="fralk/fra"><spring:message code="systema.fraktkalkulator.main.form.search.label.fra"/></span>
+			 					<td class="text14">&nbsp;<span title="fralk/fra"><spring:message code="systema.fraktkalkulator.main.form.search.label.fra"/></span>
 			 						<a href="javascript:void(0);" target="_blank" onClick="window.open('fraktkalkulator_childwindow_postalcodes.do?action=doInit&direction=fra&st2lk=${model.user.fralk}','postalWin','top=150px,left=320px,height=600px,width=800px,scrollbars=no,status=no,location=no')">
 					 					&nbsp;<img align="bottom" src="resources/images/find.png" width="12px" height="12px" border="0" alt="search">
 						            	</a>
 			 					</td>
-					 			<td class="text12">&nbsp;<span title="tillk/til"><spring:message code="systema.fraktkalkulator.main.form.search.label.til"/></</span>
+					 			<td class="text14">&nbsp;<span title="tillk/til"><spring:message code="systema.fraktkalkulator.main.form.search.label.til"/></</span>
 			 						<a href="javascript:void(0);" target="_blank" onClick="window.open('fraktkalkulator_childwindow_postalcodes.do?action=doInit&direction=til&st2lk=${model.user.tillk}','postalWin','top=150px,left=340px,height=600px,width=800px,scrollbars=no,status=no,location=no')">
 					 					&nbsp;<img align="bottom" src="resources/images/find.png" width="12px" height="12px" border="0" alt="search">
 									</a>						            	
 					 			</td>
-					 			<td class="text12">&nbsp;<span title="vkt"><spring:message code="systema.fraktkalkulator.main.form.search.label.vkt"/></</span></td>
+					 			<td class="text14">&nbsp;<span title="vkt"><spring:message code="systema.fraktkalkulator.main.form.search.label.vkt"/></</span></td>
 			 				</tr>
 			 				<tr >
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input type="text" class="inputTextMediumBlue" name="fralk" id="fralk" size="2" maxlength="2" value="${model.user.fralk}">
 					 				&nbsp;<input type="text" class="inputTextMediumBlue" name="fra" id="fra" size="5" maxlength="5" value="${model.user.fra}">
 					 			</td>
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input type="text" class="inputTextMediumBlue" name="tillk" id="tillk" size="2" maxlength="2" value="${model.user.tillk}">
 					 				&nbsp;<input type="text" class="inputTextMediumBlue" name="til" id="til" size="5" maxlength="5" value="${model.user.til}">
 				 				</td>
@@ -150,22 +150,22 @@
 			 				<tr height="10"><td></td></tr>
 			 				<tr><td colspan="10"><hr size="1" width="100%" 	/></td></tr>
 			 				<tr>
-					 			<td class="text12Bold" colspan="2">&nbsp;<spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam"/></</td>
+					 			<td class="text14Bold" colspan="2">&nbsp;<spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam"/></</td>
 			 				</tr>
 			 				<tr height="3"><td></td></tr>
 			 				<tr>
-			 					<td class="text12">&nbsp;<span title="ant"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.ant"/></</span></td>
-					 			<td class="text12">&nbsp;<span title="m3"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.m3"/></</span></td>
-					 			<td class="text12">&nbsp;<span title="lm"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.lm"/></</span></td>
+			 					<td class="text14">&nbsp;<span title="ant"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.ant"/></</span></td>
+					 			<td class="text14">&nbsp;<span title="m3"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.m3"/></</span></td>
+					 			<td class="text14">&nbsp;<span title="lm"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.lm"/></</span></td>
 			 				</tr>
 			 				<tr >
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="ant" id="ant" size="5" maxlength="5" value="${model.user.ant}">
 					 			</td>
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="m3" id="m3" size="5" maxlength="5" value="${model.user.m3}">
 				 				</td>
-				 				<td class="text12">
+				 				<td class="text14">
 					 				<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="lm" id="lm" size="5" maxlength="5" value="${model.user.lm}">
 					 			</td>
 			 				</tr>
@@ -173,15 +173,15 @@
 			 				<c:if test="${model.user.xkunfrakt=='N' || model.user.xkunfrakt=='n'}">
 			 					<tr height="5"><td></td></tr>
 				 				<tr >
-						 			<td class="text12">
+						 			<td class="text14">
 						 				<span title="farlig"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.farlig"/></</span>
 						 				<input type="checkbox" name="farlig" id="farlig" value="1" <c:if test="${model.user.farlig == 'J'}"> checked </c:if> >
 						 			</td>
-						 			<td class="text12">
+						 			<td class="text14">
 						 				<span title="varme"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.varme"/></</span>
 						 				<input type="checkbox" name="varme" id="varme" value="1" <c:if test="${model.user.varme == 'J'}"> checked </c:if> >
 					 				</td>
-					 				<td class="text12">
+					 				<td class="text14">
 					 					<span title="lengde"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.lengde"/></</span>
 						 				<input type="checkbox" name="lengde" id="lengde" value="1" <c:if test="${model.user.lengde == 'J'}"> checked </c:if> >
 						 			</td>
@@ -189,10 +189,10 @@
 			 				</c:if>
 			 				<tr height="5"><td></td></tr>
 			 				<tr>
-			 					<td class="text12">&nbsp;<span title="prod"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.prod"/></span></td>
+			 					<td class="text14">&nbsp;<span title="prod"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.prod"/></span></td>
 					 		</tr>
 			 				<tr>
-			 					<td class="text12" colspan="2">
+			 					<td class="text14" colspan="2">
 						    			<select name="prod" id="prod">
 		            						<option value="">-velg-</option>
 			 				  				<c:forEach var="record" items="${model.prodList}" >
@@ -206,10 +206,10 @@
 			 					<tr height="10"><td></td></tr>
 			 					<tr><td colspan="5"><hr size="1" width="100%" 	/></td></tr>
 			 					<tr>
-			 						<td class="text12" colspan="3">&nbsp;<span title="wsavd"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.tjenType"/></span></td>
+			 						<td class="text14" colspan="3">&nbsp;<span title="wsavd"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.tjenType"/></span></td>
 					 			</tr>
 				 				<tr >
-						 			<td class="text12" colspan="3">
+						 			<td class="text14" colspan="3">
 						    			<select name="wsavd" id="wsavd">
 			            					<option value="">-velg-</option>
 			 				  			<c:forEach var="record" items="${model.tjenesteList}" >
@@ -220,12 +220,12 @@
 				 				</tr>
 				 				<tr height="5"><td></td></tr>
 				 				<tr>
-			 						<td class="text12" colspan="2">&nbsp;<span title="wsot"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.oppType"/></span></td>
-			 						<td class="text12" >&nbsp;<span title="frankod"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.levvilkor"/></span></td>
+			 						<td class="text14" colspan="2">&nbsp;<span title="wsot"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.oppType"/></span></td>
+			 						<td class="text14" >&nbsp;<span title="frankod"><spring:message code="systema.fraktkalkulator.main.form.search.label.tillegsparam.levvilkor"/></span></td>
 			 						
 					 			</tr>
 				 				<tr >
-						 			<td class="text12" colspan="2">
+						 			<td class="text14" colspan="2">
 							    			<select name="wsot" id="wsot">
 							    				<option value="">-velg-</option>
 				            					<c:forEach var="record" items="${model.oppdragList}" >
@@ -233,7 +233,7 @@
 											</c:forEach>
 										</select>
 					    				</td>
-					    				<td class="text12">
+					    				<td class="text14">
 						    				<select name="frankod" id="frankod">
 				            					<option value="">-velg-</option>
 				 				  			<c:forEach var="record" items="${model.incotermsList}" >
@@ -248,7 +248,7 @@
 			 				<tr>
 			 					<td>&nbsp;</td>
 			 					<td>&nbsp;</td>
-			 					<td align="right" class="text12" valign="top">
+			 					<td align="right" class="text14" valign="top">
 			 						<input class="inputFormSubmit" type="submit" name="submit" value='<spring:message code="systema.fraktkalkulator.search"/>'>
 			 						&nbsp;&nbsp;&nbsp;&nbsp;
 			 					</td>
@@ -260,14 +260,14 @@
 	            </table>
 	            </form>
             </td>
-            <td width="50%"class="text12" valign="top">
+            <td width="50%"class="text14" valign="top">
             		<form name="resultForm" id="resultForm" method="post">
 				<table width="90%" align="left" border="0" cellspacing="0" cellpadding="0">
 				 	<tr >
 					 	<td >
 						<table width="100%" class="dashboardFrameHeader" border="0" cellspacing="1" cellpadding="0">
 					 		<tr height="15">
-					 			<td class="text12White">
+					 			<td class="text14White">
 					 			&nbsp;&nbsp;<spring:message code="systema.fraktkalkulator.main.form.result.label.title"/>&nbsp;
 					 			</td>
 			 				</tr>
@@ -280,22 +280,22 @@
 						<table width="100%" class="formFrame" border="0" cellspacing="2" cellpadding="1">
 							<%-- Hide this section until further instructions  
 					 		<tr >
-					 			<td class="text12" colspan="8">&nbsp;<span title="avvknr"><spring:message code="systema.fraktkalkulator.main.form.result.label.avvknr"/></span></td>
+					 			<td class="text14" colspan="8">&nbsp;<span title="avvknr"><spring:message code="systema.fraktkalkulator.main.form.result.label.avvknr"/></span></td>
 			 				</tr>
 			 				<tr >
-					 			<td class="text12" colspan="8"><input readonly type="text" class="inputTextMediumBlue" name="avvknr" id="avvknr" size="8" maxlength="8" value="${model.container.avvknr}"></td>
+					 			<td class="text14" colspan="8"><input readonly type="text" class="inputTextMediumBlue" name="avvknr" id="avvknr" size="8" maxlength="8" value="${model.container.avvknr}"></td>
 			 				</tr>
 			 				<tr>
-			 					<td class="text12">&nbsp;<span title="fralk/fra"><spring:message code="systema.fraktkalkulator.main.form.result.label.fra"/></span></td>
-					 			<td class="text12">&nbsp;<span title="tillk/til"><spring:message code="systema.fraktkalkulator.main.form.result.label.til"/></span></td>
-					 			<td class="text12">&nbsp;<span title="vkt"><spring:message code="systema.fraktkalkulator.main.form.result.label.vkt"/></span></td>
+			 					<td class="text14">&nbsp;<span title="fralk/fra"><spring:message code="systema.fraktkalkulator.main.form.result.label.fra"/></span></td>
+					 			<td class="text14">&nbsp;<span title="tillk/til"><spring:message code="systema.fraktkalkulator.main.form.result.label.til"/></span></td>
+					 			<td class="text14">&nbsp;<span title="vkt"><spring:message code="systema.fraktkalkulator.main.form.result.label.vkt"/></span></td>
 			 				</tr>
 			 				<tr >
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="fralk" id="fralk" size="2" maxlength="2" value="${model.container.fralk}">
 					 				&nbsp;<input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="fra" id="fra" size="5" maxlength="5" value="${model.container.fra}">
 					 			</td>
-					 			<td class="text12"><input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="tillk" id="tillk" size="2" maxlength="2" value="${model.container.tillk}">
+					 			<td class="text14"><input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="tillk" id="tillk" size="2" maxlength="2" value="${model.container.tillk}">
 					 				<input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="til" id="til" size="5" maxlength="5" value="${model.container.til}">
 				 				</td>
 				 				<td>
@@ -305,37 +305,37 @@
 			 				--%>
 			 				<tr height="5"><td></td></tr>
 			 				<tr>
-			 					<td colspan="2" class="text11MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.fra.short"/>:</b>&nbsp;${model.container.fralk}&nbsp;${model.container.fra}&nbsp;${model.container.fraNavn}</td>
+			 					<td colspan="2" class="text12MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.fra.short"/>:</b>&nbsp;${model.container.fralk}&nbsp;${model.container.fra}&nbsp;${model.container.fraNavn}</td>
 			 					<td colspan="2" >&nbsp;</td>
-			 					<td colspan="2" class="text11MediumBlue"><b><spring:message code="systema.fraktkalkulator.main.form.result.label.til.short"/>:</b>&nbsp;${model.container.tillk}&nbsp;${model.container.til}&nbsp;${model.container.tilNavn}</td>
+			 					<td colspan="2" class="text12MediumBlue"><b><spring:message code="systema.fraktkalkulator.main.form.result.label.til.short"/>:</b>&nbsp;${model.container.tillk}&nbsp;${model.container.til}&nbsp;${model.container.tilNavn}</td>
 			 				</tr>
 		 					<tr height="5"><td></td></tr>
 			 				<tr>
-			 					<td class="text12MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.fraktvikt"/>:</b>&nbsp;${model.container.fbv}</td>
-			 					<td colspan="2" class="text12MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.avgangsdagar"/>:</b>&nbsp;${model.container.avdg}</td>
-			 					<td colspan="2" class="text12MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.framforingstid"/>:</b>&nbsp;${model.container.frdg}</td>
+			 					<td class="text14MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.fraktvikt"/>:</b>&nbsp;${model.container.fbv}</td>
+			 					<td colspan="2" class="text14MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.avgangsdagar"/>:</b>&nbsp;${model.container.avdg}</td>
+			 					<td colspan="2" class="text14MediumBlue">&nbsp;<b><spring:message code="systema.fraktkalkulator.main.form.result.label.framforingstid"/>:</b>&nbsp;${model.container.frdg}</td>
 			 				</tr>
 		 					
 			 				<tr><td colspan="10"><hr size="1" width="100%"/></td></tr>
 			 				
 			 				<%--Hide this section until further instructions  
 			 				<tr>
-					 			<td class="text12Bold" colspan="2">&nbsp;<spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam"/></td>
+					 			<td class="text14Bold" colspan="2">&nbsp;<spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam"/></td>
 			 				</tr>
 			 				<tr height="3"><td></td></tr>
 			 				<tr>
-			 					<td class="text12">&nbsp;<span title="ant(readonly)"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.ant"/></span></td>
-					 			<td class="text12">&nbsp;<span title="m3(readonly)"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.m3"/></span></td>
-					 			<td class="text12">&nbsp;<span title="lm(readonly)"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.lm"/></span></td>
+			 					<td class="text14">&nbsp;<span title="ant(readonly)"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.ant"/></span></td>
+					 			<td class="text14">&nbsp;<span title="m3(readonly)"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.m3"/></span></td>
+					 			<td class="text14">&nbsp;<span title="lm(readonly)"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.lm"/></span></td>
 			 				</tr>
 			 				<tr >
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="ant" id="ant" size="5" maxlength="5" value="${model.container.ant}">
 					 			</td>
-					 			<td class="text12">
+					 			<td class="text14">
 					 				<input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="m3" id="m3" size="5" maxlength="5" value="${model.container.m3}">
 				 				</td>
-				 				<td class="text12">
+				 				<td class="text14">
 					 				<input readonly type="text" class="inputTextMediumBlueGrayReadOnly" name="lm" id="lm" size="5" maxlength="5" value="${model.container.lm}">
 					 			</td>
 			 				</tr>
@@ -344,15 +344,15 @@
 			 				<c:if test="${model.user.xkunfrakt=='N' || model.user.xkunfrakt=='n'}">
 			 					<tr height="5"><td></td></tr>
 				 				<tr >
-						 			<td class="text12">
+						 			<td class="text14">
 						 				<span title="farlig"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.farlig"/></</span>
 						 				<input readonly type="checkbox" name="farlig" id="farlig" value="" <c:if test="${model.container.farlig == 'J'}"> checked </c:if> >
 						 			</td>
-						 			<td class="text12">
+						 			<td class="text14">
 						 				<span title="varme"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.varme"/></</span>
 						 				<input readonly type="checkbox" name="varme" id="varme" value="" <c:if test="${model.container.varme == 'J'}"> checked </c:if> >
 					 				</td>
-					 				<td class="text12">
+					 				<td class="text14">
 					 					<span title="lengde"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.lengde"/></</span>
 						 				<input readonly type="checkbox" name="lengde" id="lengde" value="" <c:if test="${model.container.lengde == 'J'}"> checked </c:if> >
 						 			</td>
@@ -361,10 +361,10 @@
 			 				 
 			 				<tr height="5"><td></td></tr>
 			 				<tr>
-			 					<td class="text12">&nbsp;<span title="prod"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.prod"/></span></td>
+			 					<td class="text14">&nbsp;<span title="prod"><spring:message code="systema.fraktkalkulator.main.form.result.label.tillegsparam.prod"/></span></td>
 					 		</tr>
 			 				<tr>
-			 					<td class="text12" colspan="5">
+			 					<td class="text14" colspan="5">
 						    			<input readonly type="text" class="inputTextMediumBlue" name="prod" id="prod" size="5" value="${model.container.prod}">
 					    			</td>
 				    			</tr>

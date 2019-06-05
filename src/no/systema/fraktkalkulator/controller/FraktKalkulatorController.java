@@ -138,7 +138,7 @@ public class FraktKalkulatorController {
 			//-----------
 			//Validation
 			//-----------
-			FraktkalkulatorValidator validator = new FraktkalkulatorValidator();
+			FraktkalkulatorValidator validator = new FraktkalkulatorValidator(this.urlCgiProxyService, appUser, this.fraktKalkulatorChildWindowsService);
 			logger.info("Host via HttpServletRequest.getHeader('Host'): " + request.getHeader("Host"));
 		    validator.validate(recordToValidate, bindingResult);
 		    

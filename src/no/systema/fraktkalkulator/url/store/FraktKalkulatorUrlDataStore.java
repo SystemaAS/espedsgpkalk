@@ -43,7 +43,6 @@ public final class FraktKalkulatorUrlDataStore {
 	static public String FRAKTKALKULATOR_FETCH_RESULT_DATA_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TJSYFRA1.pgm";
 	//http://gw.systema.no/sycgip/TJSYFRA1.pgm?user=JOVO&fra=1000&til=1000 
 		
-	
 	//FETCH PROD DATA (drop down)
 	@UrlDataStoreAnnotationForField (name="@FraktKalkulatorController - fraktkalkulator ", description=" --> FRAKTKALKULATOR_FETCH_DROPDOWN_PRODUCT_DATA_URL - fetch dropdown")
 	static public String FRAKTKALKULATOR_FETCH_DROPDOWN_PRODUCT_DATA_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TJSYFRAP.pgm";

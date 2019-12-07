@@ -234,7 +234,8 @@ public class DashboardController {
 		String user = request.getParameter("ru");
 		String pwd = request.getParameter("dp");
 		//set attributes since the method call do not uses those fields' names
-		appUser.setUser(user);
+		appUser.setEncryptedPassword(user);
+		appUser.setUser(this.aesManager.decrypt(user));
 		appUser.setEncryptedPassword(pwd);
 		appUser.setPassword(this.aesManager.decrypt(pwd));
 		

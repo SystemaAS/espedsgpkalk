@@ -96,7 +96,7 @@ public class DashboardController {
 		ModelAndView successView = new ModelAndView("redirect:fraktkalkulatorgate.do?action=doInit");
 		Map model = new HashMap();
 		
-		SessionCookieManager cookieMgr = new SessionCookieManager();
+		SessionCookieManager cookieMgr = new SessionCookieManager(request);
 		
 		//Init cookie token since this page is excluded in the interceptor
 		cookieMgr.removeLocalCookie(response);

@@ -22,7 +22,14 @@
 				<img valign="bottom" src="resources/images/calculator.png" height="14" width="14" border="0" alt="general list">
 			</td>
 			<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
-			<td width="80%" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>			
+			<td width="80%" class="tabFantomSpace" align="left" nowrap>
+				<font class="tabDisabledLink">&nbsp;
+					<c:forEach var="text" items="${model.user.pricecalctextList}">
+						<c:out value="${text}" />		                
+		            </c:forEach>
+				</font>
+				
+			</td>			
 		</tr>
 	</table>
 	</td>

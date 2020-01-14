@@ -84,6 +84,14 @@ public class JsonFraktKalkulatorUserContainer {
 	public void setStid(String value){ this.stid = value;}
 	public String getStid(){ return this.stid; }
 	
+	private String[] pricecalctext = null;
+	public void setPricecalctext(String[] value){ this.pricecalctext = value;}
+	public String[] getPricecalctext(){ return this.pricecalctext; }
+	
+	private List pricecalctextList = null;
+	public void setPricecalctextList(List value){ this.pricecalctextList = value;}
+	public List getPricecalctextList(){ return this.pricecalctextList; }
+	
 	private String overskr = null;
 	public void setOverskr(String value){ this.overskr = value;}
 	public String getOverskr(){ return this.overskr; }

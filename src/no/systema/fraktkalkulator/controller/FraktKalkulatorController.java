@@ -146,8 +146,11 @@ public class FraktKalkulatorController {
 			if(bindingResult.hasErrors()){
 				logger.info("[ERROR Validation] search-filter does not validate)");
 				//set model
+				recordToValidate.setPricecalctextList(this.getUserData(model, appUser.getUser()).getPricecalctextList());
 	    		model.put(this.FRAKTKALK_USER_STR, recordToValidate);
-	    		this.getDropDownLists(model, appUser.getUser(), recordToValidate);
+	    		
+				//Get default data
+		    	this.getDropDownLists(model, appUser.getUser(), recordToValidate);
 		    	successView.addObject(FraktKalkulatorConstants.DOMAIN_MODEL , model);
 				return successView;
 	    		
@@ -182,6 +185,7 @@ public class FraktKalkulatorController {
 		    		//--------------------------------------
 		    		//Final successView with domain objects
 		    		//--------------------------------------
+		    		recordToValidate.setPricecalctextList(this.getUserData(model, appUser.getUser()).getPricecalctextList());
 		    		model.put(this.FRAKTKALK_USER_STR, recordToValidate);
 		    		//Get drop down lists
 			    	this.getDropDownLists(model, appUser.getUser(), recordToValidate);
@@ -280,6 +284,9 @@ public class FraktKalkulatorController {
 		if(jsonPayload!=null){
 	    		container = this.fraktKalkulatorUserService.getContainer(jsonPayload);
 	    		if(container!=null){
+	    			logger.warn(container.getPricecalctext()[0]);
+	    			container.setPricecalctextList(Arrays.asList(container.getPricecalctext()));
+	    			logger.warn(container.getPricecalctextList());
 	    			model.put(this.FRAKTKALK_USER_STR, container);
 	    		}	
 	    	}

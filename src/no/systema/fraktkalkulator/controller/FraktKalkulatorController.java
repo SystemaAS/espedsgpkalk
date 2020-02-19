@@ -166,8 +166,8 @@ public class FraktKalkulatorController {
 	    		String urlRequestParams = this.getRequestUrlKeyParameters(recordToValidate, appUser);
 	    		session.setAttribute(FraktKalkulatorConstants.ACTIVE_URL_RPG_FRAKT_KALKULATOR, BASE_URL + "==>params: " + urlRequestParams.toString()); 
 		    	logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
-		    	logger.info("URL: " + BASE_URL);
-		    	logger.info("URL PARAMS: " + urlRequestParams);
+		    	logger.warn("URL: " + BASE_URL);
+		    	logger.warn("URL PARAMS: " + urlRequestParams);
 		    	
 		    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams);
 				//Debug -->
@@ -217,13 +217,21 @@ public class FraktKalkulatorController {
 		//Fra Postnr
 		urlRequestParams.append("user=" + appUser.getUser() + "&varlk=fralk&varkod=fra");
 		urlRequestParams.append("&soklk=" + jsonFraktKalkulatorResultContainer.getFralk() + "&sokkod=" + jsonFraktKalkulatorResultContainer.getFra());
+		logger.info(BASE_URL);
+		logger.info(urlRequestParams.toString());
 		String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
 		if(jsonPayload!=null){
     		JsonPostalCodesContainer container = this.fraktKalkulatorChildWindowsService.getPostalCodesContainer(jsonPayload);
     		if(container!=null){
     			List<JsonPostalCodesRecord> list = new ArrayList();
     			for(JsonPostalCodesRecord  record : container.getPostnrlist()){
-    				jsonFraktKalkulatorResultContainer.setFraNavn(record.getSt2nvn());
+    				logger.info(record.getSt2kod() + " " + record.getSt2nvn());
+    				if(jsonFraktKalkulatorResultContainer.getFra()!=null){
+    					if(jsonFraktKalkulatorResultContainer.getFra().equals(record.getSt2kod())){
+    						jsonFraktKalkulatorResultContainer.setFraNavn(record.getSt2nvn());
+    					}
+    				}
+    				
     			}
     		}
 		}
@@ -238,7 +246,12 @@ public class FraktKalkulatorController {
     		if(container!=null){
     			List<JsonPostalCodesRecord> list = new ArrayList();
     			for(JsonPostalCodesRecord  record : container.getPostnrlist()){
-    				jsonFraktKalkulatorResultContainer.setTilNavn(record.getSt2nvn());
+    				logger.info(record.getSt2kod() + " " + record.getSt2nvn());
+    				if(jsonFraktKalkulatorResultContainer.getTil()!=null){
+    					if(jsonFraktKalkulatorResultContainer.getTil().equals(record.getSt2kod())){
+    						jsonFraktKalkulatorResultContainer.setTilNavn(record.getSt2nvn());
+    					}
+    				}
     			}
     		}
 		}		

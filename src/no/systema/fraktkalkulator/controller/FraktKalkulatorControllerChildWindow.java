@@ -260,8 +260,8 @@ public class FraktKalkulatorControllerChildWindow {
 		    		//prepare the access CGI with RPG back-end
 		    		String BASE_URL = FraktKalkulatorUrlDataStore.FRAKTKALKULATOR_FETCH_POSTAL_CODES_URL;
 		    		String urlRequestParamsKeys = this.getRequestUrlKeyParametersSearchPostalCodes(recordToValidate, appUser);
-		    		logger.info("URL: " + BASE_URL);
-		    		logger.info("PARAMS: " + urlRequestParamsKeys);
+		    		logger.warn("URL: " + BASE_URL);
+		    		logger.warn("PARAMS: " + urlRequestParamsKeys);
 		    		logger.info(Calendar.getInstance().getTime() +  " CGI-start timestamp");
 		    		String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParamsKeys);
 		    		//Debug -->

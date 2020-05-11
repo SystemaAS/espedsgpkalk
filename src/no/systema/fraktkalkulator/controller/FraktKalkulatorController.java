@@ -297,7 +297,9 @@ public class FraktKalkulatorController {
 		if(jsonPayload!=null){
 	    		container = this.fraktKalkulatorUserService.getContainer(jsonPayload);
 	    		if(container!=null){
-	    			logger.warn(container.getPricecalctext()[0]);
+	    			if(container.getPricecalctext().length>0){
+	    				logger.warn(container.getPricecalctext()[0]);
+	    			}
 	    			container.setPricecalctextList(Arrays.asList(container.getPricecalctext()));
 	    			logger.warn(container.getPricecalctextList());
 	    			model.put(this.FRAKTKALK_USER_STR, container);

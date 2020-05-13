@@ -191,6 +191,9 @@ public class FraktKalkulatorController {
 			    	this.getDropDownLists(model, appUser.getUser(), recordToValidate);
 			    	//Put domain objects
 		    		this.setDomainObjectsInView(session, model, jsonFraktKalkulatorResultContainer);
+		    		if(jsonFraktKalkulatorResultContainer.getErrMsg()!=null && jsonFraktKalkulatorResultContainer.getErrMsg() != ""){
+		    			model.put("errorMessage", jsonFraktKalkulatorResultContainer.getErrMsg());
+		    		}
 		    		successView.addObject(FraktKalkulatorConstants.DOMAIN_MODEL , model);
 		    		//domain and search filter
 		    		//successView.addObject("searchFilter", searchFilter);

@@ -154,6 +154,26 @@
 							</tr>
 							</spring:hasBindErrors>			 				
 			 				
+			 				<%-- -------------------------- --%>
+							<%-- Validation errors on model --%>
+							<%-- -------------------------- --%>
+							<c:if test="${not empty model.errorMessage}">
+								<tr>
+								<td>
+						           	<table align="left" border="0" cellspacing="0" cellpadding="0">
+						           	<tr>
+									<td valign="bottom" class="textError">					
+							            <ul>
+							            	<li >${model.errorMessage}</li>
+							            </ul>
+									</td>
+									</tr>
+									</table>
+								</td>
+								</tr>		
+							</c:if>
+	
+			 				
 			 				<tr height="10"><td></td></tr>
 			 				<tr><td colspan="10"><hr size="1" width="100%" 	/></td></tr>
 			 				<tr>

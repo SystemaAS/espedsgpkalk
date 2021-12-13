@@ -4,7 +4,7 @@
 package no.systema.fraktkalkulator.mapper.jsonjackson;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 //application library
 import no.systema.fraktkalkulator.model.jsonjackson.JsonFraktKalkulatorUserContainer;
 import no.systema.main.mapper.jsonjackson.general.ObjectMapperAbstractGrandFather;
@@ -20,7 +20,7 @@ import java.util.*;
  * 
  */
 public class FraktKalkulatorUserMapper extends ObjectMapperAbstractGrandFather {
-	private static final Logger logger = Logger.getLogger(FraktKalkulatorUserMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(FraktKalkulatorUserMapper.class.getName());
 	/**
 	 * 
 	 * @param utfPayload

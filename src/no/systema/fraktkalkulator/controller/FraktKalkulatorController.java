@@ -2,7 +2,7 @@ package no.systema.fraktkalkulator.controller;
 
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -63,7 +63,7 @@ import no.systema.fraktkalkulator.url.store.FraktKalkulatorUrlDataStore;
 @Scope("session")
 public class FraktKalkulatorController {
 	
-	private static final Logger logger = Logger.getLogger(FraktKalkulatorController.class.getName());
+	private static final Logger logger = LogManager.getLogger(FraktKalkulatorController.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(1000);
 	private final String FRAKTKALK_USER_STR = "user";
 	private final String FRAKTKALK_DROP_DOWN_PROD = "prodList";

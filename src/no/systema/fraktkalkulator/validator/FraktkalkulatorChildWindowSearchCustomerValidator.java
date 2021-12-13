@@ -1,6 +1,6 @@
 package no.systema.fraktkalkulator.validator;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -16,7 +16,7 @@ import no.systema.fraktkalkulator.model.jsonjackson.customer.JsonFraktKalkulator
  *
  */
 public class FraktkalkulatorChildWindowSearchCustomerValidator implements Validator {
-	private static final Logger logger = Logger.getLogger(FraktkalkulatorChildWindowSearchCustomerValidator.class.getName());
+	private static final Logger logger = LogManager.getLogger(FraktkalkulatorChildWindowSearchCustomerValidator.class.getName());
 	
 	/**
 	 * 

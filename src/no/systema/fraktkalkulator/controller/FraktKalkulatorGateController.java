@@ -1,6 +1,6 @@
 package no.systema.fraktkalkulator.controller;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +29,7 @@ import no.systema.main.util.DateTimeManager;
 
 @Controller
 public class FraktKalkulatorGateController {
-	private static final Logger logger = Logger.getLogger(FraktKalkulatorGateController.class.getName());
+	private static final Logger logger = LogManager.getLogger(FraktKalkulatorGateController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private DateTimeManager dateTimeMgr = new DateTimeManager();
 	

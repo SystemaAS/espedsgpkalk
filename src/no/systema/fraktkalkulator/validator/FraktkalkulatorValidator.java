@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -29,7 +29,7 @@ import no.systema.main.util.StringManager;
  *
  */
 public class FraktkalkulatorValidator implements Validator {
-	private static final Logger logger = Logger.getLogger(FraktkalkulatorValidator.class.getName());
+	private static final Logger logger = LogManager.getLogger(FraktkalkulatorValidator.class.getName());
 	private static final StringManager strMgr = new StringManager();
 	private UrlCgiProxyService urlCgiProxyService;
 	private FraktKalkulatorChildWindowsService fraktKalkulatorChildWindowsService;

@@ -2,7 +2,7 @@ package no.systema.fraktkalkulator.controller;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -55,7 +55,7 @@ import no.systema.fraktkalkulator.validator.FraktkalkulatorChildWindowSearchCust
 @Scope("session")
 public class FraktKalkulatorControllerChildWindow {
 	
-	private static final Logger logger = LogManager.getLogger(FraktKalkulatorControllerChildWindow.class.getName());
+	private static final Logger logger =  LoggerFactory.getLogger(FraktKalkulatorControllerChildWindow.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(1000);
 	//customer
 	private final String DATATABLE_CUSTOMER_LIST = "customerList";
@@ -169,7 +169,7 @@ public class FraktKalkulatorControllerChildWindow {
 					return successView;
 					
 			    	}else{
-					logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+					logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}
 				
@@ -285,7 +285,7 @@ public class FraktKalkulatorControllerChildWindow {
 					return successView;
 					
 			    	}else{
-					logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+					logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}
 				

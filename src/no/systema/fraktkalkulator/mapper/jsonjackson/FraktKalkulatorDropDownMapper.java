@@ -4,7 +4,7 @@
 package no.systema.fraktkalkulator.mapper.jsonjackson;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 //application library
 import no.systema.fraktkalkulator.model.jsonjackson.dropdownlist.JsonFraktKalkulatorDropDownContainer;
@@ -25,7 +25,7 @@ import java.util.*;
  * 
  */
 public class FraktKalkulatorDropDownMapper extends ObjectMapperAbstractGrandFather {
-	private static final Logger logger = LogManager.getLogger(FraktKalkulatorDropDownMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(FraktKalkulatorDropDownMapper.class.getName());
 	/**
 	 * 
 	 * @param utfPayload

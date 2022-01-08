@@ -6,7 +6,7 @@ package no.systema.fraktkalkulator.controller.ajax;
 import java.util.*;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -50,7 +50,7 @@ import no.systema.fraktkalkulator.model.jsonjackson.dropdownlist.JsonFraktKalkul
 @Controller
 
 public class FraktKalkulatorAjaxHandlerController {
-	private static final Logger logger = LogManager.getLogger(FraktKalkulatorAjaxHandlerController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(FraktKalkulatorAjaxHandlerController.class.getName());
 	 
 	
 	  /**

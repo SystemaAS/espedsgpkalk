@@ -2,7 +2,7 @@ package no.systema.fraktkalkulator.controller;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -63,7 +63,7 @@ import no.systema.fraktkalkulator.url.store.FraktKalkulatorUrlDataStore;
 @Scope("session")
 public class FraktKalkulatorController {
 	
-	private static final Logger logger = LogManager.getLogger(FraktKalkulatorController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(FraktKalkulatorController.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(1000);
 	private final String FRAKTKALK_USER_STR = "user";
 	private final String FRAKTKALK_DROP_DOWN_PROD = "prodList";
@@ -200,7 +200,7 @@ public class FraktKalkulatorController {
 		    		logger.info(Calendar.getInstance().getTime() + " CONTROLLER end - timestamp");
 		    		return successView;
 		    	}else{
-		    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+		    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 		    		return loginView;
 				}
 		    }
@@ -304,7 +304,7 @@ public class FraktKalkulatorController {
 	    				logger.warn(container.getPricecalctext()[0]);
 	    			}
 	    			container.setPricecalctextList(Arrays.asList(container.getPricecalctext()));
-	    			logger.warn(container.getPricecalctextList());
+	    			logger.warn(container.getPricecalctextList().toString());
 	    			model.put(this.FRAKTKALK_USER_STR, container);
 	    		}	
 	    	}

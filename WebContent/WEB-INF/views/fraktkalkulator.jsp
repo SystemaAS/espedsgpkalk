@@ -92,7 +92,7 @@
 						 			</c:otherwise>
 					 			</c:choose>
 					 			<td class="text14" >
-					    				 <input style="cursor:pointer;" type="button" value="Postadr.bok" name="cnButton" onClick="window.open('http://epab.posten.no','')">
+					    				 <input style="cursor:pointer;" type="button" value="Postadr.bok" name="cnButton" onClick="window.open('https://adressesok.posten.no','')">
 					    				 <img src="resources/images/find.png" width="12px" height="12px" border="0" alt="search">
 					 			</td>
 			 				</tr>
